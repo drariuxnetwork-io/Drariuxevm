@@ -13,6 +13,7 @@
 //
 // You should have received a copy of the GNU Lesser General Public License
 // along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+
 package types
 
 import (
@@ -23,12 +24,11 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/evmos/ethermint/types"
 )
 
 var (
-	// DefaultEVMDenom defines the default EVM denomination on Ethermint
-	DefaultEVMDenom = types.AttoPhoton
+	// DefaultEVMDenom defines the default EVM denomination on Drariux Network
+	DefaultEVMDenom = "aadrariux" // 1 adrariux = 10^18 aadrariux
 	// DefaultAllowUnprotectedTxs rejects all unprotected txs (i.e false)
 	DefaultAllowUnprotectedTxs = false
 	// DefaultEnableCreate enables contract creation (i.e true)

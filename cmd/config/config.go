@@ -13,6 +13,7 @@
 //
 // You should have received a copy of the GNU Lesser General Public License
 // along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+
 package config
 
 import (
@@ -22,8 +23,8 @@ import (
 )
 
 const (
-	// Bech32Prefix defines the Bech32 prefix used for EthAccounts
-	Bech32Prefix = "ethm"
+	// Bech32Prefix defines the Bech32 prefix used for Drariux accounts
+	Bech32Prefix = "drx"
 
 	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address
 	Bech32PrefixAccAddr = Bech32Prefix
@@ -41,7 +42,7 @@ const (
 
 const (
 	// DisplayDenom defines the denomination displayed to users in client applications.
-	DisplayDenom = "photon"
+	DisplayDenom = "DRC"
 )
 
 // SetBech32Prefixes sets the global prefixes to be used when serializing addresses and public keys to Bech32 strings.
@@ -64,7 +65,8 @@ func RegisterDenoms() {
 		panic(err)
 	}
 
-	if err := sdk.RegisterDenom(ethermint.AttoPhoton, sdk.NewDecWithPrec(1, ethermint.BaseDenomUnit)); err != nil {
+	// Registrar la denominación base: aadrariux = 10^-18 DRC
+	if err := sdk.RegisterDenom("aadrariux", sdk.NewDecWithPrec(1, 18)); err != nil {
 		panic(err)
 	}
 }
